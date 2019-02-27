@@ -16,9 +16,14 @@ Simple demo of how to utilize TypeORM and ExpressJS in building an API
 
 ![ERD](images/erd.png)
 
-### Endpoints (add more to make this more complete)
+## Endpoints (add more to make this more complete)
 
 | Endpoint | Description |
 |---|---|
 | /api/v1/students | List all students |
 | /api/v1/lectures | List all lecturers |
+
+
+## References
+
+- [Example using TypeORM with Express](https://github.com/typeorm/typeorm/blob/master/docs/example-with-express.md)

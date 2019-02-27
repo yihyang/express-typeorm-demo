@@ -16,9 +16,9 @@ Simple demo of how to utilize TypeORM and ExpressJS in building an API
 
 ![ERD](images/erd.png)
 
-### Endpoints (to add more to make this more complete)
+### Endpoints (add more to make this more complete)
 
-| endpoint |
-|---|
-| /api/v1/students | List all students
+| Endpoint | Description |
+|---|---|
+| /api/v1/students | List all students |
 | /api/v1/lectures | List all lecturers |

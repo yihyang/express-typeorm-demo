@@ -1,32 +1,20 @@
 import * as express from "express";
+import {createConnection} from "typeorm";
 import {Request, Response} from "express";
 import * as bodyParser from  "body-parser";
 
-// create and setup express app
-const app = express();
-app.use(bodyParser.json());
+import routes from "./routes";
 
-// register routes
 
-app.get("/users", function(req: Request, res: Response) {
-    // here we will have logic to return all users
-});
+createConnection().then(async connection => {
+  // create and setup express app
+  const PORT_NUM = 3000;
+  const app = express();
+  app.use(bodyParser.json());
 
-app.get("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to return user by id
-});
+  app.use("/", routes);
 
-app.post("/users", function(req: Request, res: Response) {
-    // here we will have logic to save a user
-});
-
-app.put("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to update a user by a given user id
-});
-
-app.delete("/users/:id", function(req: Request, res: Response) {
-    // here we will have logic to delete a user by a given user id
-});
-
-// start express server
-app.listen(3000);
+  // start express server
+  app.listen(PORT_NUM);
+console.log(`Application started at ${PORT_NUM}`);
+})

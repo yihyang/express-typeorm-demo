@@ -4,6 +4,9 @@
   "description": "building a simple API using TypeORM and ExpressJS",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf ts-build && tsc",
+    "dev": "./node_modules/ts-node-dev/bin/ts-node-dev --respawn src/app.ts",
+    "start": "node ts-build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w"
   },
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/yihyang/express-typeorm-demo#readme",
   "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.3.3333"
   },
   "dependencies": {

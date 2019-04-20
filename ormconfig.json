@@ -1,7 +1,12 @@
 {
+  "type": "postgres",
   "host": "localhost",
   "port": 5432,
   "username": "test",
   "password": "test",
-  "database": "typeorm-express"
+  "database": "typeorm-express",
+  "synchronize": false,
+  "entities": [
+    "src/entity/**/*.ts"
+  ]
 }
